@@ -6,5 +6,5 @@
  * @returns {function(T): function(U): V}
  */
 export function curry(f) {
-  return (t) => (u) => f(t, u);
+  return (t) => (u) => f(t, u)
 }

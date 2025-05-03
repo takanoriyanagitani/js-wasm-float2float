@@ -10,8 +10,8 @@
  */
 export function of(t) {
   return () => {
-    return Promise.resolve(t);
-  };
+    return Promise.resolve(t)
+  }
 }
 
 /**
@@ -25,8 +25,8 @@ export function bind(io, mapper) {
   return () => {
     return Promise.resolve()
       .then((_) => io())
-      .then((t) => mapper(t)());
-  };
+      .then((t) => mapper(t)())
+  }
 }
 
 /**
@@ -38,7 +38,7 @@ export function bind(io, mapper) {
 export function lift(pure) {
   return (t) => {
     return () => {
-      return pure(t);
-    };
-  };
+      return pure(t)
+    }
+  }
 }
